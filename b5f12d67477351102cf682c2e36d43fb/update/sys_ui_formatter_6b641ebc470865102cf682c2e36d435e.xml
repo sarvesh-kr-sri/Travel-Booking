@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_formatter">
+    <sys_ui_formatter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <angular_module/>
+        <formatter>traveller_details.xml</formatter>
+        <name>Traveller Details</name>
+        <seismic_component/>
+        <sys_class_name>sys_ui_formatter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-26 06:56:33</sys_created_on>
+        <sys_id>6b641ebc470865102cf682c2e36d435e</sys_id>
+        <sys_name>Traveller Details</sys_name>
+        <sys_package display_value="Travel Booking" source="x_938887_travelapp">b5f12d67477351102cf682c2e36d43fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Booking">b5f12d67477351102cf682c2e36d43fb</sys_scope>
+        <sys_update_name>sys_ui_formatter_6b641ebc470865102cf682c2e36d435e</sys_update_name>
+        <table>x_938887_travelapp_travel_request</table>
+        <type>formatter</type>
+    </sys_ui_formatter>
+</record_update>

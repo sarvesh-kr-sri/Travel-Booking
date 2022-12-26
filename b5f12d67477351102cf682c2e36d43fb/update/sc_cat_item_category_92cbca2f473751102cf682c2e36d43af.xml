@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Travel Booking App Registration Request">e191796747f351102cf682c2e36d4335</sc_cat_item>
+        <sc_category display_value="Application Registration">862271a747f351102cf682c2e36d4321</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-22 08:59:09</sys_created_on>
+        <sys_id>92cbca2f473751102cf682c2e36d43af</sys_id>
+        <sys_name>Application Registration.Travel Booking App Registration Request</sys_name>
+        <sys_package display_value="Travel Booking" source="x_938887_travelapp">b5f12d67477351102cf682c2e36d43fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Booking">b5f12d67477351102cf682c2e36d43fb</sys_scope>
+        <sys_update_name>sc_cat_item_category_92cbca2f473751102cf682c2e36d43af</sys_update_name>
+    </sc_cat_item_category>
+</record_update>

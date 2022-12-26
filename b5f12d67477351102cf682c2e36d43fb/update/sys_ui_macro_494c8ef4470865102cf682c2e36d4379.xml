@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>traveller_details</name>
+        <scoped_name>x_938887_travelapp_traveller_details</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-26 06:48:38</sys_created_on>
+        <sys_id>494c8ef4470865102cf682c2e36d4379</sys_id>
+        <sys_name>traveller_details</sys_name>
+        <sys_package display_value="Travel Booking" source="x_938887_travelapp">b5f12d67477351102cf682c2e36d43fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Booking">b5f12d67477351102cf682c2e36d43fb</sys_scope>
+        <sys_update_name>sys_ui_macro_494c8ef4470865102cf682c2e36d4379</sys_update_name>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+<style> 
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+	
+td, th {
+	border: 3px solid #dddddd;
+	text-align:left;
+	pdding: 8px;
+}
+	</style>
+	<g2:evaluate var="jvar_new_record" jelly="true" object="false">
+		current.isNewRecord();
+	</g2:evaluate>
+	
+	<j2:if test="$[jvar_new_record]">
+	</j2:if>
+	
+	<j2:if test="$[jvar_new_record]">
+		<h4><b> Traveller Details</b></h4>
+		<table>
+		<g2:evaluate var="jvar_new_record" jelly="true" object="true">
+		var user_GR = new GlideRecord('sys_user');
+		user_GR.addQuery('sys_id',current.traveller_name.user);
+		user_GR.query();
+	</g2:evaluate>
+		
+	<j2:if test="$[jvar_user_GR.next()]">
+		<j2:set var= "jvar_user_email" value="$[jvar_user_GR.getValue('email')]"/>>
+		<j2:set var= "jvar_user_phone" value="$[jvar_user_GR.getValue('mobile_phone')]"/>>
+	</j2:if>
+	<tr>
+		<td> Email Address</td>
+		<td> $[jvar_user_email] </td>
+	</tr>
+	<tr>
+		<td> Movile No.</td>
+		<td> $[jvar_user_phone] </td>
+	</tr>
+	<g2:evaluate var="jvar_request_count" jelly="true">
+		var traveller_GR = new GlideRecord(current.getTableName());
+		traveller_GR.addQuery('traveller_name',current.traveller_name);
+		traveller_GR.query();
+		traveller_GR.getRowCount();
+	</g2:evaluate>
+	<j2:if test="$[jvar_request_count ge 1]">
+		<tr>
+		<td>Total Requests Created</td>
+		<td> $[[jvar_request_count] </td>
+	</tr>
+	</j2:if>
+		</table>	
+	</j2:if>	
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

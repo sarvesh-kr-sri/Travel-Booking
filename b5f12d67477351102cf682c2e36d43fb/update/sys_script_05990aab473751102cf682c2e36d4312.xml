@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection/>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Assign Travel User Role</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	var role2user = new GlideRecord(sys_user_has_role);
+	role2user.addQuery('user', current.user);
+	role2user.addQuery('role', '95c22de347b351102cf682c2e36d4348');
+	role2user.query();
+	
+	if(!role2user.hasNext()){
+		role2user.initialize();
+		role2user.setValue('user', current.user);
+		role2user.setValue('role', '95c22de347b351102cf682c2e36d4348');
+		role2user.insert();
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-22 08:58:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>05990aab473751102cf682c2e36d4312</sys_id>
+        <sys_name>Assign Travel User Role</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Travel Booking" source="x_938887_travelapp">b5f12d67477351102cf682c2e36d43fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Booking">b5f12d67477351102cf682c2e36d43fb</sys_scope>
+        <sys_update_name>sys_script_05990aab473751102cf682c2e36d4312</sys_update_name>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=05990aab473751102cf682c2e36d4312"/>
+</record_update>

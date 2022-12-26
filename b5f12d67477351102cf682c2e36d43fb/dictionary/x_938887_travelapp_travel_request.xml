@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0ee665eb47b351102cf682c2e36d439f" label="Travel Request" max_length="40" name="x_938887_travelapp_travel_request" type="collection">
+        <element label="No. of days" mandatory="true" max_length="40" name="no_of_days" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Booking ID" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Request Status" max_length="40" name="request_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Old" sequence="1" value="old"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Traveller Name" mandatory="true" max_length="32" name="traveller_name" reference="sys_user" type="reference"/>
+        <element label="Travel Agent" max_length="40" name="travel_agent" type="string"/>
+        <element label="Travel End Date" max_length="40" name="travel_end_date" type="glide_date"/>
+        <element label="Travel Start date" mandatory="true" max_length="40" name="travel_start_date" type="glide_date"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index2">
+            <element name="traveller_name"/>
+        </index>
+    </element>
+</database>
